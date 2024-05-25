@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Hello, World!</title>
+</head>
+<body>
+  <h1>
+    Hello, World!
+    
+    
+
+<!-- Formulário HTML -->
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" enctype="multipart/form-data">
+    Username: <input type="text" name="username" value="<?php echo isset($username) ? $username : ''; ?>">
+    <span class="error"><?php echo isset($erro_username) ? $erro_username : ''; ?></span>
+    <br><br>
+    Email: <input type="text" name="email" value="<?php echo isset($email) ? $email : ''; ?>">
+    <span class="error"><?php echo isset($erro_email) ? $erro_email : ''; ?></span>
+    <br><br>
+    Password: <input type="password" name="password">
+    <span class="error"><?php echo isset($erro_password) ? $erro_password : ''; ?></span>
+    <br><br>
+    Foto: <input type="file" name="foto">
+    <span class="error"><?php echo isset($erro_foto) ? $erro_foto : ''; ?></span>
+    <br><br>
+    <input type="submit" name="submit" value="Submit">
+</form>
+
+  </h1>
+</body>
+</html>
